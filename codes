@@ -1,0 +1,26 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+ char birlestirF(char *x, char *y, char *z)
+{
+   	char *p;
+   	for(p=x; *p != '\0'; p++, z++)
+   	  *z=*p;
+   	
+   	for(p=y; *p != '\0'; p++, z++)
+   	  *z=*p;
+   	*z = '\0';
+}
+int main()
+{ 
+    char str1[]="hello", str2[]=" world";
+    char birlesme[10];
+    
+    birlestirF(str1,str2,birlesme);
+    cout << "New String is " << birlesme << endl;
+    
+    
+   
+	system("pause");
+	return 0;
+}
